@@ -24,8 +24,10 @@ Requirements for milestone 1. Each maps to roadmap phases.
 
 - [x] **CLI-01
 **: User can start recording with `meetcap` or `meetcap "<title>"`
-- [ ] **CLI-02**: Config file at platform-appropriate path (TOML format) with recordings_dir
-- [ ] **CLI-03**: First run prompts for recordings directory if not configured
+- [x] **CLI-02
+**: Config file at platform-appropriate path (TOML format) with recordings_dir
+- [x] **CLI-03
+**: First run prompts for recordings directory if not configured
 
 ## v2 Requirements (Milestone 2 — Summarization Pipeline)
 
