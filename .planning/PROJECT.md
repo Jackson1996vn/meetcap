@@ -12,7 +12,9 @@ When I finish a meeting and hit Ctrl+C, an accurate, structured markdown summary
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ CLI entry point (`meetcap` / `meetcap "<title>"`) — Phase 1
+- ✓ TOML config at platform-appropriate path — Phase 1
+- ✓ First-run wizard for recordings directory — Phase 1
 
 ### Active
 
@@ -103,4 +105,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-05-09 after initialization*
+*Last updated: 2026-05-09 after Phase 1 completion*
