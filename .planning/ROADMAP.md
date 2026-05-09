@@ -12,7 +12,7 @@ Milestone 1 delivers a working audio capture tool. Three phases build on each ot
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Project scaffolding, click entrypoint, TOML config, first-run wizard
+- [x] **Phase 1: Foundation** - Project scaffolding, click entrypoint, TOML config, first-run wizard (completed 2026-05-09)
 - [ ] **Phase 2: Platform Backends** - macOS ScreenCaptureKit spike and Windows WASAPI loopback backend
 - [ ] **Phase 3: Recording Pipeline** - Dual-stream mixer, resampling, Ctrl+C handling, WAV output
 
@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01: uv project setup, package structure, click entrypoint, `meetcap`/`meetcap "<title>"` commands
-- [ ] 01-02: TOML config system with platformdirs, first-run wizard for recordings_dir
+- [x] 01-02: TOML config system with platformdirs, first-run wizard for recordings_dir
 
 ### Phase 2: Platform Backends
 **Goal**: System audio can be captured on both macOS (ScreenCaptureKit) and Windows (WASAPI loopback) through a shared backend interface
@@ -70,6 +70,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/2 | In progress | - |
+| 1. Foundation | 2/2 | Complete    | 2026-05-09 |
 | 2. Platform Backends | 0/2 | Not started | - |
 | 3. Recording Pipeline | 0/2 | Not started | - |

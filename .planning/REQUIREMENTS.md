@@ -120,9 +120,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUD-03 | Phase 2 | Pending |
 | AUD-04 | Phase 2 | Pending |
 | AUD-05 | Phase 3 | Pending |
-| CLI-01 | Phase 1 | Pending |
-| CLI-02 | Phase 1 | Pending |
-| CLI-03 | Phase 1 | Pending |
+| CLI-01 | Phase 1 | Complete |
+| CLI-02 | Phase 1 | Complete |
+| CLI-03 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements (milestone 1): 8 total
