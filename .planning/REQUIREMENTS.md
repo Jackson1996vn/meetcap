@@ -112,20 +112,20 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUD-01 | — | Pending |
-| AUD-02 | — | Pending |
-| AUD-03 | — | Pending |
-| AUD-04 | — | Pending |
-| AUD-05 | — | Pending |
-| CLI-01 | — | Pending |
-| CLI-02 | — | Pending |
-| CLI-03 | — | Pending |
+| AUD-01 | Phase 3 | Pending |
+| AUD-02 | Phase 3 | Pending |
+| AUD-03 | Phase 2 | Pending |
+| AUD-04 | Phase 2 | Pending |
+| AUD-05 | Phase 3 | Pending |
+| CLI-01 | Phase 1 | Pending |
+| CLI-02 | Phase 1 | Pending |
+| CLI-03 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements (milestone 1): 8 total
-- Mapped to phases: 0
-- Unmapped: 8
+- Mapped to phases: 8
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-05-09*
-*Last updated: 2026-05-09 after milestone restructure*
+*Last updated: 2026-05-09 — traceability mapped during roadmap creation*
