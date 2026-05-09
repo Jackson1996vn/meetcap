@@ -2,11 +2,11 @@
 
 ## What This Is
 
-A personal CLI tool that records meetings (mic + system audio), transcribes locally with Whisper, summarizes with Claude, and drops a structured markdown note into an Obsidian vault. No SaaS, no accounts, no UI — run `meetcap` before a call, hit Ctrl+C when done, get a note.
+A personal CLI tool that records meetings (mic + system audio), transcribes locally with Whisper, summarizes with OpenAI GPT, and drops a structured markdown note into an Obsidian vault. No SaaS, no accounts, no UI — run `meetcap` before a call, hit Ctrl+C when done, get a note. Future milestone adds real-time live captions during meetings.
 
 ## Core Value
 
-When I finish a meeting and hit Ctrl+C, an accurate, structured markdown summary appears in my Obsidian vault within minutes — without any audio leaving my machine except transcript text to Claude's API.
+When I finish a meeting and hit Ctrl+C, an accurate, structured markdown summary appears in my Obsidian vault within minutes — without any audio leaving my machine except transcript text to OpenAI's API.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ When I finish a meeting and hit Ctrl+C, an accurate, structured markdown summary
 - [ ] Handle audio device disconnect mid-recording gracefully
 - [ ] Transcribe locally with faster-whisper (large-v3 model, VAD filtering)
 - [ ] Output transcript as full text + timestamped segments JSON
-- [ ] Summarize transcript with Claude Sonnet via Anthropic API
+- [ ] Summarize transcript with OpenAI GPT via OpenAI API
 - [ ] Produce structured summary: title, tldr, key_points, decisions, action_items
 - [ ] Map-reduce summarization for meetings > 30 minutes
 - [ ] Cache summaries by transcript hash to avoid redundant API calls
@@ -44,7 +44,7 @@ When I finish a meeting and hit Ctrl+C, an accurate, structured markdown summary
 - GUI / menu bar / tray icon — CLI-only for v1
 - Mobile / browser extension — desktop CLI only
 - Team features / sharing / cloud sync — personal tool
-- Real-time live captions — not needed for post-meeting notes
+- Real-time live captions — milestone 3
 - Video recording — audio only
 - Automatic meeting detection — Phase 2
 - Speaker diarization — Phase 2
@@ -56,18 +56,18 @@ When I finish a meeting and hit Ctrl+C, an accurate, structured markdown summary
 
 - Single developer building this for personal use on evenings/weekends
 - Target machines: Apple Silicon Mac (macOS 13+) and Windows 10+ PC
-- User already has an Obsidian vault and Anthropic API key
+- User already has an Obsidian vault and OpenAI API key
 - English-language meetings for v1
 - Python 3.11+ ecosystem chosen for fast shipping and ML library availability
-- Key libraries: faster-whisper (CTranslate2), sounddevice/soundcard, click, anthropic SDK
-- Audio pipeline: record WAV → transcribe → convert to Opus for storage
-- Claude API cost is ~$0.03 per meeting — acceptable
+- Key libraries: faster-whisper (CTranslate2), sounddevice/soundcard, click, openai SDK
+- Audio pipeline: record WAV → transcribe → summarize via OpenAI GPT → markdown output
+- Three milestones planned: (1) audio capture, (2) transcription + summarization, (3) live captions
 
 ## Constraints
 
 - **Timeline**: Buildable in 1-2 weekends
-- **Budget**: No paid services except Claude API (~$0.03/meeting)
-- **Privacy**: Audio stays local by default; only transcript text goes to Claude API
+- **Budget**: No paid services except OpenAI API for summarization
+- **Privacy**: Audio stays local by default; only transcript text goes to OpenAI API
 - **Platform**: macOS 13+ (ScreenCaptureKit) and Windows 10+ (WASAPI loopback)
 - **Install**: Single command — `pipx install meetcap`, no drivers or reboots
 - **Performance**: < 500ms startup, < 5% CPU during recording, < 4GB RAM during transcription
@@ -80,7 +80,7 @@ When I finish a meeting and hit Ctrl+C, an accurate, structured markdown summary
 | Python over Rust | Fast to ship, rich audio/ML ecosystem | — Pending |
 | WAV recording → Opus conversion | Whisper reads WAV natively, Opus is 40x smaller for storage | — Pending |
 | ScreenCaptureKit only (no BlackHole) | Simpler, no driver install, macOS 13+ covers target machines | — Pending |
-| Claude-only for v1 (no Ollama) | Ship faster, lower build cost, add local LLM in v2 | — Pending |
+| OpenAI GPT for summarization | User preference, ChatGPT model for structured summaries | — Pending |
 | Whisper-only (no Deepgram) | Local transcription covers core use case, privacy default | — Pending |
 | Configurable vault subfolder (default: Meetings/) | Flexibility without manual setup | — Pending |
 | TOML config format | Stdlib in Python 3.11+, human-readable | — Pending |
