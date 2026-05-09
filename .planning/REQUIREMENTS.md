@@ -22,7 +22,8 @@ Requirements for milestone 1. Each maps to roadmap phases.
 
 ### CLI & Config (Milestone 1 scope)
 
-- [ ] **CLI-01**: User can start recording with `meetcap` or `meetcap "<title>"`
+- [x] **CLI-01
+**: User can start recording with `meetcap` or `meetcap "<title>"`
 - [ ] **CLI-02**: Config file at platform-appropriate path (TOML format) with recordings_dir
 - [ ] **CLI-03**: First run prompts for recordings directory if not configured
 

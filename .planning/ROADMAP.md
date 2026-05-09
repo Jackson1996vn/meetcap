@@ -30,7 +30,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: uv project setup, package structure, click entrypoint, `meetcap`/`meetcap "<title>"` commands
+- [x] 01-01: uv project setup, package structure, click entrypoint, `meetcap`/`meetcap "<title>"` commands
 - [ ] 01-02: TOML config system with platformdirs, first-run wizard for recordings_dir
 
 ### Phase 2: Platform Backends
@@ -70,6 +70,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/2 | Not started | - |
+| 1. Foundation | 1/2 | In progress | - |
 | 2. Platform Backends | 0/2 | Not started | - |
 | 3. Recording Pipeline | 0/2 | Not started | - |
