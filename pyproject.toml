@@ -1,0 +1,17 @@
+[project]
+name = "meetcap"
+version = "0.1.0"
+description = "Meeting recorder and summarizer"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.3.3",
+    "platformdirs>=4.9.6",
+    "tomli-w>=1.2.0",
+]
+
+[project.scripts]
+meetcap = "meetcap.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.9.13,<0.10.0"]
+build-backend = "uv_build"
