@@ -27,7 +27,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Running `meetcap` with no existing config prompts the user for a recordings directory and writes it to a TOML file at the platform-appropriate path
   3. Running `meetcap` again with config present skips the prompt and proceeds to recording mode (even if recording itself is a stub)
   4. Config file is readable TOML containing `recordings_dir` at the correct OS-specific path
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
 - [ ] 01-01: uv project setup, package structure, click entrypoint, `meetcap`/`meetcap "<title>"` commands
@@ -42,7 +42,7 @@ Plans:
   2. On macOS, missing Screen Recording permission produces a clear, actionable error message rather than a silent failure
   3. On Windows 10+, WASAPI loopback captures system audio samples via PyAudioWPatch without requiring any driver installation
   4. Both backends conform to the same `SystemAudioBackend` protocol and can be swapped by platform detection
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
 - [ ] 02-01: `SystemAudioBackend` protocol, macOS ScreenCaptureKit backend with delegate retain fix and permission check
@@ -57,7 +57,7 @@ Plans:
   2. Both streams are resampled to 48000 Hz canonical rate before mixing — no audible drift between mic and system audio
   3. Pressing Ctrl+C stops recording, flushes all buffers, and writes a valid WAV file (verified with `soundfile.info()`)
   4. The output WAV file is saved to the configured recordings directory with a timestamped filename
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
 - [ ] 03-01: Dual-stream mixer with samplerate resampling to 48000 Hz canonical rate
