@@ -530,22 +530,22 @@ Note: The exact CMSampleBuffer extraction requires working with PyObjC's C struc
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **CMSampleBuffer → float32 extraction in PyObjC — exact pattern**
    - What we know: PyObjC wraps `CMSampleBufferGetAudioBufferListWithRetainedBlockBuffer` via AVFoundation. The maintainer's example does not show the full extraction loop.
    - What's unclear: The exact ctypes/objc bridge pattern to access `AudioBuffer.mData` pointer as a numpy buffer on macOS 26.x.
-   - Recommendation: Make the first Wave 0 task a 30-minute spike: install pyobjc-framework-ScreenCaptureKit, run the maintainer's example (issue #647), extend it to print the numpy array shape and first few values. This validates the full extraction chain before implementing the protocol.
+   - RESOLVED: Plan 02-01 Task 0 spike validates this as a go/no-go gate before implementation in Task 2.
 
 2. **Does `addStreamOutput` with `SCStreamOutputTypeScreen` PLUS `None` queue work on macOS 26.x?**
    - What we know: The maintainer's example passes `None` for `sampleHandlerQueue` in `addStreamOutput_type_sampleHandlerQueue_error_`.
    - What's unclear: Whether `None` queue causes callbacks to be delivered on the main thread (risky) or on a private OS thread (fine). The run loop requirement (D-08) interaction is untested.
-   - Recommendation: Spike this before implementing the full backend.
+   - RESOLVED: Plan 02-01 Task 0 spike validates this on macOS 26.x as a go/no-go gate before implementation.
 
 3. **`samplerate` library availability for in-callback Windows resampling**
    - What we know: `samplerate` (pip installable) wraps libsamplerate which provides high-quality SRC.
    - What's unclear: Whether libsamplerate is fast enough for 48 kHz real-time processing in a PyAudio callback on a budget Windows machine.
-   - Recommendation: Add `samplerate` as a dependency; benchmark in a standalone test. Fallback: `np.interp` (lower quality but zero dependencies).
+   - RESOLVED: samplerate added as dependency with numpy interp fallback in Plan 02-02 Task 2.
 
 ---
 
