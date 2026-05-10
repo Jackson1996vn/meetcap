@@ -13,7 +13,7 @@ Milestone 1 delivers a working audio capture tool. Three phases build on each ot
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Project scaffolding, click entrypoint, TOML config, first-run wizard (completed 2026-05-09)
-- [ ] **Phase 2: Platform Backends** - macOS ScreenCaptureKit spike and Windows WASAPI loopback backend
+- [x] **Phase 2: Platform Backends** - macOS ScreenCaptureKit spike and Windows WASAPI loopback backend (completed 2026-05-10)
 - [ ] **Phase 3: Recording Pipeline** - Dual-stream mixer, resampling, Ctrl+C handling, WAV output
 
 ## Phase Details
@@ -45,8 +45,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: `SystemAudioBackend` protocol, macOS ScreenCaptureKit backend with delegate retain fix and permission check
-- [ ] 02-02: Windows WASAPI loopback backend via PyAudioWPatch
+- [x] 02-01: `SystemAudioBackend` protocol, macOS ScreenCaptureKit backend with delegate retain fix and permission check
+- [x] 02-02: Windows WASAPI loopback backend via PyAudioWPatch
 
 ### Phase 3: Recording Pipeline
 **Goal**: Users can record mic + system audio simultaneously into a valid WAV file that stops cleanly on Ctrl+C
@@ -71,5 +71,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete    | 2026-05-09 |
-| 2. Platform Backends | 0/2 | Not started | - |
+| 2. Platform Backends | 2/2 | Complete    | 2026-05-10 |
 | 3. Recording Pipeline | 0/2 | Not started | - |

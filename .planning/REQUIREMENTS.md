@@ -18,7 +18,7 @@ Requirements for milestone 1. Each maps to roadmap phases.
 - [ ] **AUD-02**: Recording stops cleanly on Ctrl+C with proper WAV buffer flush (no corrupt files)
 - [x] **AUD-03
 **: System audio captured via ScreenCaptureKit on macOS 13+ (no driver install required)
-- [ ] **AUD-04**: System audio captured via WASAPI loopback on Windows 10+ (no driver install required)
+- [x] **AUD-04**: System audio captured via WASAPI loopback on Windows 10+ (no driver install required)
 - [ ] **AUD-05**: Audio streams resampled to canonical rate to prevent drift between mic and system audio
 
 ### CLI & Config (Milestone 1 scope)
@@ -119,7 +119,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUD-01 | Phase 3 | Pending |
 | AUD-02 | Phase 3 | Pending |
 | AUD-03 | Phase 2 | Pending |
-| AUD-04 | Phase 2 | Pending |
+| AUD-04 | Phase 2 | Complete |
 | AUD-05 | Phase 3 | Pending |
 | CLI-01 | Phase 1 | Complete |
 | CLI-02 | Phase 1 | Complete |
