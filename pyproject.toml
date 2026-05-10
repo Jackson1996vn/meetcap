@@ -5,7 +5,12 @@ description = "Meeting recorder and summarizer"
 requires-python = ">=3.11"
 dependencies = [
     "click>=8.3.3",
+    "numpy>=2.4",
     "platformdirs>=4.9.6",
+    "pyobjc-framework-avfoundation>=12.1; sys_platform=='darwin'",
+    "pyobjc-framework-coremedia>=12.1; sys_platform=='darwin'",
+    "pyobjc-framework-cocoa>=12.1; sys_platform=='darwin'",
+    "pyobjc-framework-screencapturekit>=12.1; sys_platform=='darwin'",
     "tomli-w>=1.2.0",
 ]
 
