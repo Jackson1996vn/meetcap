@@ -31,10 +31,12 @@ dependencies = [
     { name = "click" },
     { name = "numpy" },
     { name = "platformdirs" },
+    { name = "pyaudiowpatch", marker = "sys_platform == 'win32'" },
     { name = "pyobjc-framework-avfoundation", marker = "sys_platform == 'darwin'" },
     { name = "pyobjc-framework-cocoa", marker = "sys_platform == 'darwin'" },
     { name = "pyobjc-framework-coremedia", marker = "sys_platform == 'darwin'" },
     { name = "pyobjc-framework-screencapturekit", marker = "sys_platform == 'darwin'" },
+    { name = "samplerate", marker = "sys_platform == 'win32'" },
     { name = "tomli-w" },
 ]
 
@@ -43,10 +45,12 @@ requires-dist = [
     { name = "click", specifier = ">=8.3.3" },
     { name = "numpy", specifier = ">=2.4" },
     { name = "platformdirs", specifier = ">=4.9.6" },
+    { name = "pyaudiowpatch", marker = "sys_platform == 'win32'", specifier = ">=0.2.12" },
     { name = "pyobjc-framework-avfoundation", marker = "sys_platform == 'darwin'", specifier = ">=12.1" },
     { name = "pyobjc-framework-cocoa", marker = "sys_platform == 'darwin'", specifier = ">=12.1" },
     { name = "pyobjc-framework-coremedia", marker = "sys_platform == 'darwin'", specifier = ">=12.1" },
     { name = "pyobjc-framework-screencapturekit", marker = "sys_platform == 'darwin'", specifier = ">=12.1" },
+    { name = "samplerate", marker = "sys_platform == 'win32'", specifier = ">=0.2.1" },
     { name = "tomli-w", specifier = ">=1.2.0" },
 ]
 
@@ -136,6 +140,21 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/9f/4a/0883b8e3802965322523f0b200ecf33d31f10991d0401162f4b23c698b42/platformdirs-4.9.6.tar.gz", hash = "sha256:3bfa75b0ad0db84096ae777218481852c0ebc6c727b3168c1b9e0118e458cf0a", size = 29400, upload-time = "2026-04-09T00:04:10.812Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/75/a6/a0a304dc33b49145b21f4808d763822111e67d1c3a32b524a1baf947b6e1/platformdirs-4.9.6-py3-none-any.whl", hash = "sha256:e61adb1d5e5cb3441b4b7710bea7e4c12250ca49439228cc1021c00dcfac0917", size = 21348, upload-time = "2026-04-09T00:04:09.463Z" },
+]
+
+[[package]]
+name = "pyaudiowpatch"
+version = "0.2.12.8"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f8/a3/0bd930258c9b81f77ec52f1edfa5a8ed44c4d6079d1253c4fee5ed766863/pyaudiowpatch-0.2.12.8-cp311-cp311-win32.whl", hash = "sha256:13903f6a78abfd745fbae82c1edda95119fce179c6f2fc95e7849a54d537dce1", size = 96645, upload-time = "2026-01-14T18:19:26.217Z" },
+    { url = "https://files.pythonhosted.org/packages/55/df/88a94ca45c8b158b52888f5010cdad2f7998d5c4a44d0794fab97937f9ec/pyaudiowpatch-0.2.12.8-cp311-cp311-win_amd64.whl", hash = "sha256:8610948499efa12b01ec861408fcc95e7bc18c1dddf0abbfed6fd2305a898f63", size = 99097, upload-time = "2026-01-14T18:19:27.409Z" },
+    { url = "https://files.pythonhosted.org/packages/88/4e/ba7c938033fb25ba25f35e9f125f5c270e60c7789e65662d37424a5d9c0c/pyaudiowpatch-0.2.12.8-cp312-cp312-win32.whl", hash = "sha256:5c6f54cbee50ed3c971767cc8e85f45e94012aa3c4363b7cdd8541e9f9496d01", size = 96800, upload-time = "2026-01-14T18:19:29.01Z" },
+    { url = "https://files.pythonhosted.org/packages/e5/e1/c25c239737386a3fd85354ce35a00fbe83e993a7e51d76791022850ca12c/pyaudiowpatch-0.2.12.8-cp312-cp312-win_amd64.whl", hash = "sha256:fd163a6531c4e4969925e687ef1bc57fae8ecc1a95de7ba707a436622552d7fa", size = 99319, upload-time = "2026-01-14T18:19:31.063Z" },
+    { url = "https://files.pythonhosted.org/packages/4b/b9/62c83aea777521b0748f3ec6b4d0f8650af88d2a7fee03b98a6257f8ec32/pyaudiowpatch-0.2.12.8-cp313-cp313-win32.whl", hash = "sha256:d941c272ced5b1c6f1d054d47046ef50efcee954151c293c0102b410f549c3ab", size = 96801, upload-time = "2026-01-14T18:19:32.239Z" },
+    { url = "https://files.pythonhosted.org/packages/65/0f/aa9e6c6d331d2a027330e1275697ece6ace23c2209df8cd0f8c0e397ba1c/pyaudiowpatch-0.2.12.8-cp313-cp313-win_amd64.whl", hash = "sha256:3339e6430836a021e1a83ddb915a42eec0a8f198693855a8f32a57b4b97e0202", size = 99307, upload-time = "2026-01-14T18:19:33.706Z" },
+    { url = "https://files.pythonhosted.org/packages/8e/cf/a2544222ca61b89b27beed06efc7d9f865216fd31d0da677921ef9fb3b9d/pyaudiowpatch-0.2.12.8-cp314-cp314-win32.whl", hash = "sha256:448b83316295ab4786b1844ea296d4848c75b93ada4df6f2150715520cf985a5", size = 98755, upload-time = "2026-01-14T18:19:34.923Z" },
+    { url = "https://files.pythonhosted.org/packages/12/61/1c9e515e45dfd86d25a1447ac7241436c8000c3ab142011c23fb1d3202ed/pyaudiowpatch-0.2.12.8-cp314-cp314-win_amd64.whl", hash = "sha256:df6e26032439d87cbbeb8f433e635652a36d54cdd14aa058188e21ba5c9a7df9", size = 100997, upload-time = "2026-01-14T18:19:36.188Z" },
 ]
 
 [[package]]
@@ -261,6 +280,21 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/f0/26/8bf1bacdb2892cf26d043c7f6e8788a613bbb2ccb313a5ea0634612cfc24/pyobjc_framework_screencapturekit-12.1-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:4fc2fe72c1da5ac1b8898a7b2082ed69803e6d9c11f414bb5a5ec94422a5f74f", size = 11701, upload-time = "2025-11-14T10:02:15.634Z" },
     { url = "https://files.pythonhosted.org/packages/be/b4/881e2ff0e11e7d705716f01f1bfd10232f7d21bda38d630c3fbe409b13a9/pyobjc_framework_screencapturekit-12.1-cp314-cp314-macosx_10_15_universal2.whl", hash = "sha256:be210ea5df36c1392425c026c59c5e0797b0d6e07ee9551d032e40bed95d2833", size = 11581, upload-time = "2025-11-14T10:02:17.467Z" },
     { url = "https://files.pythonhosted.org/packages/24/d0/69f295412d5dfacb6e6890ee128b9c80c8f4f584c20842c576ee154bfc0b/pyobjc_framework_screencapturekit-12.1-cp314-cp314t-macosx_10_15_universal2.whl", hash = "sha256:534f3a433edf6417c3dd58ac52a69360e5a19c924d1cb389495c4d6cc13a875d", size = 11783, upload-time = "2025-11-14T10:02:19.257Z" },
+]
+
+[[package]]
+name = "samplerate"
+version = "0.2.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cf/c9/d73630d0c4b85d19d4d1e936a5a87a727567a54a445119c6f46563df5627/samplerate-0.2.4.tar.gz", hash = "sha256:c44dcb6fe680246f8f36588ba1f0fc7a0c5fbce710ad5e9b3812d88e8c39ac7d", size = 22066, upload-time = "2026-03-22T18:36:34.862Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ab/93/d6ccdeb89a07df6129106b545b100aee31ca3c6c68e48c24c71c0d8122fe/samplerate-0.2.4-cp311-cp311-win_amd64.whl", hash = "sha256:d10c3088f63a55923cfda33dfc55498df0f92bf2afeeeca4a90751589e3b6af0", size = 1459941, upload-time = "2026-03-22T18:36:13.084Z" },
+    { url = "https://files.pythonhosted.org/packages/89/17/b287f445d475d4c560fea1a7c0c8674f5431c407209109133446d2d09a92/samplerate-0.2.4-cp312-cp312-win_amd64.whl", hash = "sha256:2625a21eeffb81c896887659d6dffc01eedfdd60caaf653126a42871eee77aa6", size = 1460493, upload-time = "2026-03-22T18:36:18.406Z" },
+    { url = "https://files.pythonhosted.org/packages/98/b1/f30b80822196ab4f4607863a5ed8803e113e0a256dea668848a7c49c5082/samplerate-0.2.4-cp313-cp313-win_amd64.whl", hash = "sha256:be2159e7119647214f93da735d3f09753dd9f7969ff8be061c23f8eb218b1a2a", size = 1460417, upload-time = "2026-03-22T18:36:24.881Z" },
+    { url = "https://files.pythonhosted.org/packages/20/c6/b358ba51344985295bcd95226efa5344b2b1267b27e7a2205a8cb36c46ac/samplerate-0.2.4-cp314-cp314-win_amd64.whl", hash = "sha256:f8093c12d698ae821501efeb0796f189cb354d48ea8f6299ad9d79468df22eec", size = 1467602, upload-time = "2026-03-22T18:36:29.563Z" },
 ]
 
 [[package]]
