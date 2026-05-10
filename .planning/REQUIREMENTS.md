@@ -16,7 +16,8 @@ Requirements for milestone 1. Each maps to roadmap phases.
 
 - [ ] **AUD-01**: User can record microphone and system audio simultaneously into a single WAV file
 - [ ] **AUD-02**: Recording stops cleanly on Ctrl+C with proper WAV buffer flush (no corrupt files)
-- [ ] **AUD-03**: System audio captured via ScreenCaptureKit on macOS 13+ (no driver install required)
+- [x] **AUD-03
+**: System audio captured via ScreenCaptureKit on macOS 13+ (no driver install required)
 - [ ] **AUD-04**: System audio captured via WASAPI loopback on Windows 10+ (no driver install required)
 - [ ] **AUD-05**: Audio streams resampled to canonical rate to prevent drift between mic and system audio
 
